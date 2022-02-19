@@ -22,7 +22,7 @@ def pdf2graphs(inputFolderPath):
 
 
     # Initialise OD model
-    gDetector =  graphDetector('/Users/Jordan/Documents/Imperial/ME4/FYP/Data_Extraction_Project/Python/bitmap/graph_detection/edet_d0_mk2/inference_graph/saved_model') 
+    gDetector =  graphDetector('/inference_graph/saved_model') 
 
     for pdf_path in glob.glob(inputFolderPath+'/*.pdf'):
         doc = fitz.open(pdf_path)
@@ -79,4 +79,4 @@ def pdf2graphs(inputFolderPath):
 
 
 # Run Function
-pdf2graphs('/Users/Jordan/Documents/Imperial/ME4/FYP/Data_Extraction_Project/Python/Bitmap_TestCases/Testing/Report')
+pdf2graphs('INPUT FILEPATH OF FOLDER HERE')
