@@ -2,7 +2,7 @@ from re import compile, match
 import preprocess
 
 # Initialise preprocess class
-pre = preprocess.preprocess('/Users/Jordan/Documents/Imperial/ME4/FYP/Data_Extraction_Project/Python/TestCases/pg_0012.pdf.svg')
+pre = preprocess.preprocess('pg_0012.pdf.svg')
 root = pre.tree.getroot()
 
 # Function to remove duplicates from 2 lists based on only 1 list
