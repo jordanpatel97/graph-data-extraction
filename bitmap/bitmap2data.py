@@ -917,11 +917,11 @@ def runBitmap2Data(inputImage):
                     
 
 # Initialise the legend detector class and front loads OD model
-legDetector =  legendDetector('/Users/Jordan/Documents/Imperial/ME4/FYP/Data_Extraction_Project/Python/bitmap/legend_detection/edet_d0/inference_graph/saved_model') #INPUT PATH TO LEGEND DETECTION 'saved_model' FOLDER
+legDetector =  legendDetector('inference_graph/saved_model') #INPUT PATH TO LEGEND DETECTION 'saved_model' FOLDER
 
 # Run the model
 iterationNumber = 0
-for image_path in glob.glob('/Users/Jordan/Documents/Imperial/ME4/FYP/Data_Extraction_Project/Python/Bitmap_TestCases/Testing/*.png'): #INSERT FOLDER CONTAINING PNGs OF GRAPHS
+for image_path in glob.glob('/*.png'): #INSERT FOLDER CONTAINING PNGs OF GRAPHS
     iterationNumber = iterationNumber+1
     try:
         startFull = timer()
