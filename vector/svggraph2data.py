@@ -60,7 +60,7 @@ class svggraph2data:
                         # Only convert to abs if relative m exists
                         if 'm' in dPath:
                                 # Call the node js script #TODO: make file location more dynamic
-                                js = subprocess.Popen(['/usr/local/bin/node', '/Users/Jordan/Documents/Imperial/ME4/FYP/Data_Extraction_Project/Python/vector/convertToAbsolute.js', dPath], stdout=subprocess.PIPE)
+                                js = subprocess.Popen(['/usr/local/bin/node', '', dPath], stdout=subprocess.PIPE)
                                 out = js.stdout.read()
                                 # TODO: handle errors from JS (error = p.stderr.read())
                                 absPath = out.decode('utf-8') # Removes the b and /n
@@ -77,7 +77,7 @@ class svggraph2data:
                                 absPath = tempString[1:]
                                 # Round numbers in absPath to avoid erroneous cases
                                 pathList = svggraph2data.parsePath(self,absPath)
-                                for i,item in enumerate(pathList):
+                                for i,item in enumerate(pathList):f
                                         try:
                                                 num = float(item)
                                                 pathList[i] = round(num, 3)
@@ -164,7 +164,7 @@ class svggraph2data:
                                                 # Apply the transforms in transformList to the path
                                                 for transform in transformList:
                                                         if transform is not None:
-                                                                js = subprocess.Popen(['/usr/local/bin/node', '/Users/Jordan/Documents/Imperial/ME4/FYP/Data_Extraction_Project/Python/vector/Translate.js', path, str(transform)], stdout=subprocess.PIPE)
+                                                                js = subprocess.Popen(['/usr/local/bin/node', '', path, str(transform)], stdout=subprocess.PIPE)
                                                                 out = js.stdout.read()
                                                                 # TODO: handle errors from JS (error = p.stderr.read())
                                                                 absPath = out.decode('utf-8') # Removes the b and /n
@@ -940,4 +940,4 @@ class svggraph2data:
                 entireEnd = timer()
                 print('Finished in: ' + str(entireEnd - entireStart) + ' seconds')
 
-svggraph2data('/Users/Jordan/Documents/Imperial/ME4/FYP/Data_Extraction_Project/Python/SVG_TestCases/pg_0007.pdf.svg', 'raw')
+svggraph2data('pg_0007.pdf.svg', 'raw')
