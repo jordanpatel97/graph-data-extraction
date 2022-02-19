@@ -128,4 +128,4 @@ def convertReltoAbs(pathList):
         return newPathList
 
 
-applyTransforms('/Users/Jordan/Documents/Imperial/ME4/FYP/Data_Extraction_Project/Python/vector/input.svg')
+applyTransforms('input.svg')
