@@ -86,6 +86,6 @@ class graphDetector:
 
 
   def __init__(self, modelPath):
-    self.category_index = label_map_util.create_category_index_from_labelmap('/Users/Jordan/Documents/Imperial/ME4/FYP/Data_Extraction_Project/Python/bitmap/graph_detection/edet_d0/training/labelmap.pbtxt', use_display_name=True)
+    self.category_index = label_map_util.create_category_index_from_labelmap('labelmap.pbtxt', use_display_name=True)
     tf.keras.backend.clear_session()
     self.model = tf.saved_model.load(modelPath)
